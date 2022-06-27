@@ -64,22 +64,23 @@ body {
 }
 
 .slides {
-    position: relative;
     height: 502px;
 }
 
 .indicator {
+    cursor: pointer;
     width: 30px;
     height: 30px;
     border-radius: 15px;
     background-color: black;
-    cursor: pointer;
     user-select: none;
     &.active {
         background-color: rgb(227, 28, 28);
     }
 }
-
+.footer{
+    padding: 35px;
+}
 .control-prev {
     @include control;
    
