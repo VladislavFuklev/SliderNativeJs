@@ -1,28 +1,21 @@
-/*
-essential styles:
-these make the slideshow work
-*/
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
 @mixin control {
-    background-color: black;
     padding: 10px 20px;
     color: white;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 60px;
+    opacity: 0.3;
+    transition: 1s;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
-.slides {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    text-align: center;
-}
 
 .slide {
     position: absolute;
@@ -39,14 +32,17 @@ body {
     opacity: 1;
 }
 
-.slides {
-    margin-bottom: 20px;
-}
+
 
 .controls {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     gap: 20px;
+    position: absolute;
+    top: 0;
 }
 
 .control {
@@ -67,14 +63,18 @@ body {
     list-style: none;
 }
 
+.slides {
+    position: relative;
+    height: 530px;
+}
+
 .indicator {
     width: 30px;
     height: 30px;
     border-radius: 15px;
-    background-color: steelblue;
+    background-color: black;
     cursor: pointer;
     user-select: none;
-
     &.active {
         background-color: rgb(227, 28, 28);
     }
@@ -82,41 +82,46 @@ body {
 
 .control-prev {
     @include control;
+   
 
 }
+
 .control-next {
     @include control;
 
 }
+
 .control-pause {
-    position: relative;
     @include control;
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+    }
+
     span {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+
     }
 }
 
 .carousel {
-    width: 500px;
+    width: 100%;
     margin: 0 auto;
 }
 
-.slides {
-    height: 312px;
-}
+
 
 .img-slider {
-    position: relative;
-    width: 500px;
-    height: 300px;
-    border-radius: 10px;
+    width: 100%;
+    height: 600px;
 }
 
 .nav-item {
     margin: 10px;
+
     a {
         color: white;
 
@@ -127,8 +132,5 @@ body {
 }
 
 .carousel-block {
-    display: flex;
-    width: 500px;
-    margin: 0 auto;
-    margin-top: 88px;
+    width: 100%;
 }
