@@ -14,27 +14,46 @@
 
 <body>
 
-    <div class="container">
+    <header class="header bg-dark">
+        <div class="container">
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Coffee</a>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="carousel-block">
         <div id='carousel' class="carousel slider mySlider">
             <ul id="slides-container" class="slides">
-                <li class="mySlide item slide active">Slide 1</li>
-                <li class="mySlide item slide">Slide 2</li>
-                <li class="mySlide item slide">Slide 3</li>
-                <li class="mySlide item slide">Slide 4</li>
-                <li class="mySlide item slide">Slide 5</li>
+                <li class="mySlide slide active"><img class="img-slider" src="img/сoffee1.jpg" alt=""></li>
+                <li class="mySlide slide"><img class="img-slider" src="img/coffee2.jpg" alt=""></li>
+                <li class="mySlide slide"><img class="img-slider" src="img/coffee3.jpg" alt=""></li>
+                <li class="mySlide slide"><img class="img-slider" src="img/coffee4.jpg" alt=""></li>
             </ul>
         </div>
     </div>
 
+    <footer class="footer bg-dark p-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-light text-center">By Vladislav Fyklev</div>
+            </div>
+        </div>
+    </footer>
 
-
-
-
-
-
-
-
-    
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"

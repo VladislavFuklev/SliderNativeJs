@@ -5,19 +5,19 @@ these make the slideshow work
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
     box-sizing: border-box;
 }
 
-.container {
-    max-width: 992px;
-    padding: 0 20px;
-    margin: 0 auto;
+@mixin control {
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .slides {
     position: relative;
-    height: 150px;
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -39,45 +39,13 @@ body {
     opacity: 1;
 }
 
-/*
-non-essential styles:
-just for appearance; change whatever you want
-*/
-
-.slide {
-    font-size: 40px;
-    padding: 40px;
-    box-sizing: border-box;
-    background: #333;
-    color: #fff;
-}
-
-.slide:nth-of-type(1) {
-    background: red;
-}
-
-.slide:nth-of-type(2) {
-    background: orange;
-}
-
-.slide:nth-of-type(3) {
-    background: green;
-}
-
-.slide:nth-of-type(4) {
-    background: blue;
-}
-
-.slide:nth-of-type(5) {
-    background: purple;
-}
-
 .slides {
     margin-bottom: 20px;
 }
 
 .controls {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -88,12 +56,15 @@ just for appearance; change whatever you want
     user-select: none;
     display: block;
     margin-bottom: 20px;
+
 }
 
 .indicators {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    justify-content: center;
+    list-style: none;
 }
 
 .indicator {
@@ -105,16 +76,59 @@ just for appearance; change whatever you want
     user-select: none;
 
     &.active {
-        background-color: tomato;
+        background-color: rgb(227, 28, 28);
     }
 }
 
-.control-pause{
-    position: relative;
-    span {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.control-prev {
+    @include control;
+
 }
+.control-next {
+    @include control;
+
+}
+.control-pause {
+    position: relative;
+    @include control;
+    span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.carousel {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.slides {
+    height: 312px;
+}
+
+.img-slider {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.nav-item {
+    margin: 10px;
+    a {
+        color: white;
+
+        &:hover {
+            color: rgb(227, 28, 28);
+        }
+    }
+}
+
+.carousel-block {
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 88px;
 }
