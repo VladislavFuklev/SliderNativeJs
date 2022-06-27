@@ -1,0 +1,9 @@
+import SwipeCarousel from "./js/swipeCarousel.js";
+
+const carousel = new SwipeCarousel({
+    containerId: '.mySlider',
+    sliderId: '.mySlide',
+    interval: 2000,
+    isPlaying: false
+});
+carousel.init();
